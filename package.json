@@ -1,0 +1,19 @@
+{
+  "name": "Shampoo",
+  "version": "1.0.0",
+  "description": "thot destroyer",
+  "main": "floppy.js",
+  "dependencies": {
+    "bufferutil": "^4.0.0",
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "opusscript": "^0.0.6",
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tom jung",
+  "license": "MIT"
+}
