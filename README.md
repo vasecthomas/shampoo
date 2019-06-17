@@ -14,5 +14,7 @@ If you need help hosting your own instance of this bot talk to me in #bot-dev at
 no commands, but if you must, type "super fighting robot"
 
 # to do
-install guide /n
+install guide
+
+
 ability to add your own blacklisted words using regular expressions
