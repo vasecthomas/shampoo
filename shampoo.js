@@ -5,6 +5,7 @@ const config = require("./config.json");
 const commando = require('discord.js-commando')
 const permission = Discord.Permissions.FLAGS;
 
+client.on('error', console.error);
 client.login(config.token);
 
 
@@ -37,19 +38,34 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
 		caseinsensitive = message.content.toLowerCase();
+if (message.author.bot) return;
 				if (caseinsensitive.startsWith("super fighting robot")) {
 			message.channel.send("MEGA MAN!");
+
+  }
+});
+
+client.on("message", (message) => {
+		caseinsensitive = message.content.toLowerCase();
+if (message.author.bot) return;
+
+				if (caseinsensitive.startsWith("mega man")) {
+			message.channel.send("super fighting robot");
   }
 });
 
 
 
 
-client.on('message', (message) => { //whenever a message is sent
-  if (message.content.includes('81ZH2Y'||'privatepage.vip')) { //if it contains an invite link
-    message.delete() //delete the message
-    message.guild.ban(message.author)
-      .then(message.channel.send(message.author + ' be gone thot'))
-  }
-})
+client.on('message', async message => {
+let blacklisted = ['QYHhZv', 'privatepage', '81ZH2Y', 'test'];
+let foundInText = false;
+for (var i in blacklisted) {
+	if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+}
 
+if (foundInText) {
+	message.delete();
+	message.guild.ban(message.author);
+}
+});
