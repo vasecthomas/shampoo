@@ -58,7 +58,7 @@ if (message.author.bot) return;
 
 
 client.on('message', async message => {
-let blacklisted = ['QYHhZv', 'privatepage', '81ZH2Y', 'test'];
+let blacklisted = ['QYHhZv', 'privatepage', '81ZH2Y'];
 let foundInText = false;
 for (var i in blacklisted) {
 	if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
